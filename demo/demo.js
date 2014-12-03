@@ -23,6 +23,42 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                 rxBreadcrumbsSvc.set();
             }
         })
+        .when('/styleguide/basics', {
+            templateUrl: 'styleguide/basics.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }            
+        })
+        .when('/styleguide/layouts', {
+            templateUrl: 'styleguide/layouts.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/buttons', {
+            templateUrl: 'styleguide/buttons.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/tables', {
+            templateUrl: 'styleguide/tables.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/forms', {
+            templateUrl: 'styleguide/forms.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/modals', {
+            templateUrl: 'styleguide/modals.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
         .when('/component/:component', {
             controller: 'componentCtrl',
             templateUrl: 'component-template.html',
@@ -96,13 +132,104 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
             ]
         },
         {
+            title: 'Design Styleguide',
+            children: [
+                {
+                    href: '#/styleguide/basics',
+                    linkText: 'Basics',
+                    children: [
+                        {
+                            href: '#/styleguide/basics#part1',
+                            linkText: 'Typography'
+                        },
+                        {
+                            href: '#/styleguide/basics#part1',
+                            linkText: 'Header Styles'
+                        },                        
+                        {
+                            href: '#/styleguide/basics#part2',
+                            linkText: 'Descriptions'
+                        },
+                        {
+                            href: '#/styleguide/basics#part3',
+                            linkText: 'Lists'
+                        },
+                        {
+                            href: '#/styleguide/basics#part4',
+                            linkText: 'Wells'
+                        },
+                        {
+                            href: '#/styleguide/basics#part5',
+                            linkText: 'Helper classes'
+                        }
+                    ]
+                },
+                {
+                    href: '#/styleguide/layouts',
+                    linkText: 'Layouts',
+                    children: [
+                        {
+                            linkText: 'Grids'
+                        },
+                        {
+                            linkText: 'Sample Layouts',
+                            children: [
+                                {
+                                    linkText: 'Layout #1'
+                                },
+                                {
+                                    linkText: 'Layout #2'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    href: '#/styleguide/buttons',
+                    linkText: 'Buttons & Links',
+                    children: [
+                        {
+                            href: '#/styleguide/buttons#FIXME',
+                            linkText: 'Customizing Buttons'
+                        },
+                        {
+                            href: '#/styleguide/buttons#FIXME',
+                            linkText: 'Using Colors and Icons'
+                        }                    
+                    ]
+                },
+                {
+                    href: '#/styleguide/tables',
+                    linkText: 'Tables',
+                    children: [
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: ''
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: ''
+                        }                    
+                    ]
+                },
+                {
+                    href: '#/styleguide/forms',
+                    linkText: 'Forms'
+                },
+                {
+                    href: '#/styleguide/modals',
+                    linkText: 'Modals'
+                }
+            ]
+        },
+        {
             title: 'All Components',
             children: []
         }
     ];
 
     _.each(components, function (component) {
-        demoNav[1].children.push({
+        demoNav[2].children.push({
             href: '#/component/' + component.name,
             linkText: component.name
         });

@@ -1,0 +1,172 @@
+<rx-page title="'Encore-UI - Basics'">
+
+    <h3 class="title clear">Typography</h3>
+    <div class="component-description clear">
+        <p>FIXME: Flesh out</p>
+        <ul>
+            <li>We use Roboto</li>
+            <li>In the context of Roboto, so long as you are using the rxApp and rxPage components, you'll be okay on this.</li>
+            <li> src/rxApp/README.md </li>
+            <li> https://github.com/rackerlabs/encore-ui/blob/646-less-documentation/guides/getting-started.md </li>
+
+        </ul>
+    </div>
+
+    <h3 class="title clear">Heading/Title Styles</h2>
+    <div class="component-description clear">
+        <p>Headings are sized using 'xl', 'lg', 'sm' and 'xs'.</p>
+        <p>The size of the heading is not impacted by the heading level used (e.g. &lt;h1&gt;, &lt;h2&gt;). This is done to ensure that the heading levels are sequential. See <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md#basic-rules">https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md#basic-rules for further reasoning</a>.</p>
+        <p>For design consistency, we usually use the default size (&lt;h2 class="title"&gt;) for most subheaders. Other headers classes can be used for context. You can also add the <code>subdued</code> class - this is the class used as a subtitle in rxApp/rxPage.</p>
+    </div>
+
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+            <h1 class="title xl">Extra Large Class</h1>
+            <h2 class="title lg">Large Class (Standard page header)</h2>
+            <h3 class="title">Default Class (medium, standard sub-header)</h3>
+            <h3 class="title subdued">Subdued Class</h3>
+            <h4 class="title sm">Small Class</h4>
+            <h5 class="title xs">Extra Small Class</h5>            
+        </tab>
+    </tabset>    
+
+    <h3 class="title clear">Descriptions / Metadata</h2>
+
+    <div class="component-description clear">
+        <p>The <a href="#">Encore-UI metadata component</a> is a list of terms with their associated descriptions. This is used throughout Encore to show metadata, especially on an individual object such as a server or a CBS volume. This is an ideal solution if you have anywhere from 5-10 definitions; anything more than that - or anything with that displays visual or image content, and you may want to consider a different design pattern. (In Encore, see what we use in Support Services for an example of this.)</p>
+    </div>
+
+    <h3 class="title">Lists</h2>
+    <div class="component-description clear">
+        <p>By default, we do not list styles for lists. Add bullets/decimals to lists with the 'list' class. It is also possible to build non-semantic lists using the additional <code>item</code> class.</p>
+        <p>Use this in conjunction with icons, colors and helper classes such as <code>.flush-right</code> to build out action menus. Look at the detail pages in Cloud Servers and view-source for additional context.</p>
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+            <div rx-compile="component.docs.html" class="component-demo">
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>    
+</ul>
+<ol class="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+<ul class="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<div class="list bulleted">
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+</div>
+
+<div class="list decimal">
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+</div>            
+            </div>
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+    <h3 class="title">Wells</h2>
+    <div class="component-description clear">
+        <p>Creates a 'well' effect - a box with significant padding and light gray background. In the context of Encore, we currently use this in the context of adding large amounts of extraneous or optional information. (Take a look at Account -> Cloud -> Database -> Create New Instance for an example of this.</p>
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+<div class="well">
+    <h2 class="title subdued">Wait just a moment here!</h2>    
+    In convallis sit amet nunc sit amet consectetur. Donec euismod ullamcorper mauris, non elementum nibh pharetra nec. Integer varius ipsum orci, vitae maximus felis aliquet a. Proin consequat cursus rutrum. 
+</div>
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+    <h2 class="title lg">Helper Classes</h2>
+    <h3 class="title">Status Classes</h2>
+    <div class="component-description clear">
+        <p>Styles text to provide a clearer status regarding a simple message. FIXME: write out more detail about this.</p>
+
+Subdued Text: The .subdued class is a basic color change to make text less prominant. Add hover style if a link or inside a link.
+
+Full Width
+
+Class that marks content as full width (e.g. to give a button full width). Requires 'display' to be defined as inline-block or block.
+
+Hidden content
+.hidden
+
+Add to hide an element but not remove it from the spacing of the page
+
+.visually-hidden
+
+Used to hide content visually but let them still be read by screen readers (removed from the page spacing) See http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+
+Clearing Floats
+Clearfix
+
+Provide clearfix functionality See http://nicolasgallagher.com/micro-clearfix-hack/
+
+Clearing siblings
+
+Simple classes to help with clearing previous sibling floats
+
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+
+<p class="msg-action">Something was created</p>
+<p class="msg-warn">Something was deleted</p>
+<p class="msg-info">Informational Message</p>
+<p class="msg-info-blue">Blue Informational Message</p>
+
+<h1>My Items <span class="subdued">(10)</span></h1>
+<h1><a href="#">My Items <span class="subdued">(10)</span></a></h1>
+
+<h1 class="title lg">No Clearfix</h1>
+<div style="background: #ddd; padding: 1em;">
+    <div style="float: left; background: #eee; padding: 1em;">Floated Content</div>
+</div>
+
+<h1 class="title lg clear">With Clearfix</h1>
+<div class="clearfix" style="background: #ddd; padding: 1em;">
+    <div style="float: left; background: #eee; padding: 1em;">Floated Content</div>
+</div>
+
+<div class="clearfix padding: 1em;">
+    <div style="float: left;">Floated</div>
+    <div class="clear-right">Uncleared (wrong side)</div>
+    <div class="clear-left">Cleared</div>
+
+    <hr>
+
+    <div style="float: right;">Floated</div>
+    <div class="clear-left">Uncleared (wrong side)</div>
+    <div class="clear-right">Cleared</div>
+
+    <hr>
+
+    <div style="float: right;">Floated</div>
+    <div style="float: left;">Floated</div>
+    <div class="clear">Both cleared</div>
+</div>
+
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+</rx-page>

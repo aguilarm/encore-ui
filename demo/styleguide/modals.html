@@ -1,0 +1,25 @@
+<rx-page title="'Encore-UI - Modals'">
+
+Question: do we re-do rxForm or create a new component specifically for this? Or should we just clone it?
+Address notifications (static)
+We should document patterns of how modals are titled and what button text is (see LBaaS for examples--there are some inconsistencies here Encore-wide)
+When do we use modals versus requiring a whole new page?  What is the threshold for what we want to do in a modal?
+Strategy for communicating errors / validation messages from the server - should their be direction on how we do this?
+On the technical side, should we have  default strategy for handling standard http status codes:  IE: 403 Forbidden - User does not have access to resource
+
+<h3 class="title clear">Header</h3>
+
+    <div class="component-description clear">
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+            <div rx-compile="component.docs.html" class="component-demo">
+            </div>
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+
+</rx-page>

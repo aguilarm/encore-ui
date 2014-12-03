@@ -1,0 +1,149 @@
+<rx-page title="'Encore-UI - Layouts'">
+
+    <h3 class="title clear">Grids</h3>
+    <div class="component-description clear">
+
+        <p>While Encore-UI was initially designed to be an AngularJS widget library, we recognize that teams will want to use a CSS layout framework. We have added the [Grids module from Yahoo!'s Pure CSS framework](http://purecss.io/grids/) for teams to easily build out a grid or column system as part of Encore-UI. We chose this lightweight framework for its emphasis on flex based layouts.</p>
+
+        <h2>Usage</h2>
+
+<p>No additional installation is required. We have automatically included `grids-min.css` into the encore-ui CSS libraries.</p>
+<p>Note that most of the grid layouts you will use will be in the context of `rxPage` inside `rxApp`. For this reason we will be using the regular grids only, and not responsive grids.</p>
+<p>The code sample below will probably give the clearest context of how grids work. Note that the `.pure-g` also has a `clear` class attached because title containers on `rxPage` components are defaulted to float left.</p>
+<p>You'll find that the grid components will not have borders or padding within the grid units themselves. If you need white space between grid columns, you can nest a `&lt;div&gt;` inside each grid unit and style the child container.</p>
+
+<p>FIXME: Check in a column class as a PR, integrate that in once the code is merged</p>
+
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+            <div rx-compile="component.docs.html" class="component-demo">
+
+<h2 class="title">Two u-1-2 modules</h2>
+<div class="pure-g clear">
+    <div class="pure-u-1-2">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-2">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+</div>
+
+<h2 class="title">Three u-1-3 modules</h2>
+<div class="pure-g clear">
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+</div>
+
+
+<h2 class="title">Two u-1-2 modules with a columns class</h2>
+<div class="pure-g columns clear">
+    <div class="pure-u-1-2">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-2">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+</div>
+
+<h2 class="title">Three u-1-3 modules with a columns class</h2>
+<div class="pure-g columns clear">
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+    <div class="pure-u-1-3">
+    	<table class="table">
+    		<thead>
+    			<th>Header 1</th>
+    		</thead>
+    		<tbody><tr><td>Cell 1</tr></tbody>
+    	</table>
+    </div>
+</div>
+
+            </div>
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+    <h3 class="title clear">Common Layouts</h2>
+    <div class="component-description clear">
+        <p>We've made some common layouts. When viewing these layouts, view or copy the source to get a good understanding of what's happening.</p>
+
+        <p>FIXME: Build layouts</p>
+
+        <ul class="list">
+        	<li>Layout #1: one metadata element, one datatable with filters and action cogs</li>
+        	<li>Layout #2: two column tables</li>
+        	<li>Layout #3: create form that is page wide (rather than a modal)</li>
+        </ul>
+
+
+    </div>
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+            <div rx-compile="component.docs.html" class="component-demo"></div>
+        </tab>
+        <tab heading="Markup" ng-if="component.docs.html">
+            <rx-prism language="markup"></rx-prism>
+        </tab>
+    </tabset>
+
+</rx-page>
