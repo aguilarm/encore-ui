@@ -35,6 +35,24 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                 rxBreadcrumbsSvc.set();
             }
         })
+        .when('/styleguide/layouts/1', {
+            templateUrl: 'styleguide/layout-1.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/layouts/2', {
+            templateUrl: 'styleguide/layout-2.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })
+        .when('/styleguide/layouts/3', {
+            templateUrl: 'styleguide/layout-3.html',
+            controller: function (rxBreadcrumbsSvc) {
+                rxBreadcrumbsSvc.set();
+            }
+        })        
         .when('/styleguide/buttons', {
             templateUrl: 'styleguide/buttons.html',
             controller: function (rxBreadcrumbsSvc) {
@@ -175,9 +193,11 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                             linkText: 'Sample Layouts',
                             children: [
                                 {
+                                    href: '#/styleguide/layouts/1',
                                     linkText: 'Layout #1'
                                 },
                                 {
+                                    href: '#/styleguide/layouts/2',
                                     linkText: 'Layout #2'
                                 }
                             ]

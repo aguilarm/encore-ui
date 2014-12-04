@@ -1,0 +1,21 @@
+<rx-page title="'Encore-UI - Layout 3'" subtitle="'Sample Create Page'">
+
+<form class="rx-form clear">
+    <rx-form-item label="Server Name">
+        <input type="text" id="serverName" required>
+    </rx-form-item>
+
+    <rx-form-item label="Region">
+        <span class="field-select">
+            <select
+                name="region"
+                id="region"
+                ng-model="serverInfo.region"
+                ng-options="r.label group by r.type for r in regions"
+                ng-change="loadRegion()">
+            </select>
+        </span>
+    </rx-form-item>    
+</form>
+
+</rx-page>
