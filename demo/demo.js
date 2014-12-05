@@ -199,6 +199,10 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                                 {
                                     href: '#/styleguide/layouts/2',
                                     linkText: 'Layout #2'
+                                },
+                                {
+                                    href: '#/styleguide/layouts/3',
+                                    linkText: 'Layout #3'
                                 }
                             ]
                         }
