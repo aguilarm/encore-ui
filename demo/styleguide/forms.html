@@ -2,23 +2,162 @@
 
 <h3 class="title clear">Stacked Forms</h3>
 
-<h3 class="title clear">Compressed Layout</h3>
 
 <h3 class="title clear">Labels and Inputs with rxFormItem</h3>
 
-<h3 class="title clear">Textarea</h3>
+<div class="component-description clear">
+    <ul class="list">
+        <li>The directive rxFormItem creates a field row wrapped in a label. Used for fields which include a single input/field.</li>
+        <li>This will also apply to the textarea tag.</li>
+        <li>You would most likely use this angular.js directive directly, otherwise any input field can be placed inside an element with a class of <code>field-input</code> to apply styling.</li>
+        <li>NOTE: As of right now, only stacked forms are available. Any implementations for inline forms would have to avoid using rxFormItem, using the field-input class directly.</li>
+    </ul>
+</div>
+
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+<h4 class="title sm">rxFormItem Directive</h4>            
+<rx-form-item label="Plain textbox">
+    <input type="text" />
+</rx-form-item>
+<rx-form-item label="Text area">
+    <textarea rows="10" cols="50"></textarea>
+</rx-form-item>
+
+<h4 class="title sm">Non-rxFormItem Fields wrapped in .field-input</h4>
+<span class="field-input">
+    <input type="text">
+</span>
+<span class="field-input">
+    <input type="checkbox">
+</span>
+        </div>
+    </tab>
+</tabset>
+
+<h3 class="title clear">Compressed Layout</h3>
+
+<div class="component-description clear">
+    <ul class="list">
+        <li>Wrapping form items in a container of class `.rx-form.layout-compressed` will affect the form elements as shown.</li>
+        <li>Encore Specific: These particular input stylings are used specifically within TicketQueues.</li>
+    </ul>
+</div>
+
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+
+<div class="rx-form layout-compressed">
+    <rx-form-item label="Plain textbox">
+        <input type="text" />
+    </rx-form-item>
+    <rx-form-item label="Text area">
+        <textarea rows="10" cols="50"></textarea>
+    </rx-form-item>
+</div>
+
+        </div>
+    </tab>
+</tabset>
+
+<h3 class="title clear">Fieldsets with rxFormFieldset</h3>
+
+<ul>
+    <li>The rxFormFieldset directive creates a field row wrapped in a fieldset. Used for fields which include multiple inputs (e.g. rxFormOptionTable).</li>
+</ul>
+
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+<div class="form-item rx-form-fieldset">
+    <fieldset>
+        <legend class="field-legend">
+            Field Legend:
+        </legend>
+
+        <div class="field-input">
+            <!-- Add form inputs here -->
+        </div>
+
+        <span class="field-description">Description of Fields</span>
+    </fieldset>
+</div>
+        </div>
+    </tab>
+</tabset>
 
 <h3 class="title clear">Selects with rxFormItem</h3>
 
+<ul>
+    <li>The rxFormItem directive replaces the default UI of select fields and adds a custom border/arrow.</li>
+    <li>You would most likely use this angular.js directive directly, if you are not using angular you could wrap the elements with <code>.field-select</code>.</li>
+</ul>
+
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+<span class="field-select">
+    <select>
+        <option value="1">Option #1</option>
+        <option value="2">Option #2</option>
+        <option value="3">Option #3</option>
+        <option value="4">Option #4</option>
+    </select>
+</span>
+        </div>
+    </tab>
+</tabset>
+
 <h3 class="title clear">Checkboxes and radios with rxFormOptionTable</h3>
 
-<h3 class="title clear">Disabled state</h3>
+<div class="component-description clear">
+<ul class="list">
+    <li><a href="http://rackerlabs.github.io/encore-ui/#/component/rxForm">rxFormOptionTable is an angularjs-based sub-directive of rxForm</a> which displays checkboxes or radio buttons on  passing in an object.</li>
+    <li>Encore specific: For radio buttons, while the majority of radio buttons have been used in the context of a data table, there is at least one instance in Encore where they are used as part of the label/input form combo used within rxFormItem: <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/templates/server-actions.html#L112-L125">asking the user to do a hard/soft reboot</a> while in the server detail page.</li>
+</ul>
+</div>
 
-<h3 class="title clear">Fieldsets with rxFormFieldset</h3>
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+    <rx-form-item
+        label="Soft"
+        description="Performs a graceful shutdown of your system. Services are halted individually and the system is restarted.">
+        <input type="radio" name="type" id="server_reboot_soft" value="soft" ng-model="fields.reboot_type" required>
+    </rx-form-item>
+    <rx-form-item
+        label="Hard"
+        description="Performs an immediate shutdown of your server. This is the equivalent of unplugging your server.">
+        <input type="radio" name="type" id="server_reboot_hard" value="hard" ng-model="fields.reboot_type" required>
+    </rx-form-item>
+        </div>
+    </tab>
+</tabset>
+
+<h3 class="title clear">Disabled state</h3>
 
 <h3 class="title clear">Help text via metadata</h3>
 
 <h3 class="title clear">Form Validation</h3>
+
+<div class="component-description clear">
+<ul class="list">
+    <li>Note: Because Encore is built in angular, we leverage the <code>ng-required</code> directive, and as a result the Encore-UI library does have a custom CSS if an element has both <code>ng-invalid</code> and <code>ng-dirty</code> classes, which are dynamically added.</li>
+    <li>Designing an Encore-UI specific design pattern for form validation is on our roadmap.</li>
+</ul>
+</div>
+
+<tabset class="clearfix clear">
+    <tab heading="Demo">
+        <div rx-compile="component.docs.html" class="component-demo">
+<span class="field-input">
+    <input type="text" class="ng-invalid ng-dirty" value="Bad content here">
+</span>
+        </div>
+    </tab>
+</tabset>
 
 <h3 class="title clear">Encore-Specific: Button Styling</h3>
 
@@ -33,6 +172,7 @@
 <h2 class="title lg">UI Roadmap / Possible Future-work</h2>
 
 <ul class="list">
+    <li>Fleshing out a design pattern for edit states. Up until now, the editing of content has been relegated to using modals to edit individual line items. As a result, different products have handled the concept of an edit state differently. There should be conformity for this, but we have not designed a user pattern yet.</li>
     <li>Different types of forms such as inline</li>
 </ul>
 
@@ -40,18 +180,3 @@
 The only other thing we have is forms within the concept of modals
 Acknowledge metadata in create form a la https://staging.encore.rackspace.com/cloud/323676/testuserforthisaccount/databases/instances/create - Can we add a screenshot link here b/c I don't have to Cloud?  (CAS troubles)
 
-<h3 class="title clear">Header</h3>
-
-    <div class="component-description clear">
-    </div>
-    <tabset class="clearfix clear">
-        <tab heading="Demo">
-            <div rx-compile="component.docs.html" class="component-demo">
-            </div>
-        </tab>
-        <tab heading="Markup" ng-if="component.docs.html">
-            <rx-prism language="markup"></rx-prism>
-        </tab>
-    </tabset>
-
-</rx-page>

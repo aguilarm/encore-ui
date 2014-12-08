@@ -2,30 +2,29 @@
 
     <h2 class="title lg clear">Introduction</h3>
 
-<ul class="list">
-    <li>The goal of this sub-site is to get development teams at Rackspace not familiar with the Encore product a set of design patterns so all parts of Encore look like one finished, unified product.</li>
-    <li>This section of the Demo site focuses mainly on markup, CSS and design patterns.</li>
-    <li>If you're curious about specific Encore-specific angular.js directives, find the "All Components" section in the left hand navigation.</li>
-    <li>If you're a Rackspace team outside of Encore and need help setting up an new project from an engineering perspective go to this <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/getting-started.md">Getting Started guide</a> in the Encore-UI repository.</li>
-</ul>
+    <ul class="list">
+        <li>The goal of this sub-site is to get development teams at Rackspace not familiar with the Encore product a set of design patterns so all parts of Encore look like one finished, unified product.</li>
+        <li>This section of the Demo site focuses mainly on markup, CSS and design patterns.</li>
+        <li>The <a href="https://github.com/rackerlabs/encore-ui/tree/master/src/rxApp">rxApp</a> common.less file defines many base CSS rules and classes for app use. Included in this is normalize.css. This helps create a consistent starting point for styles across all browsers.</li>
+        <li>If you're curious about specific Encore-specific angular.js directives, find the "All Components" section in the left hand navigation.</li>
+        <li>If you're a Rackspace team outside of Encore and need help setting up an new project from an engineering perspective go to this <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/getting-started.md">Getting Started guide</a> in the Encore-UI repository.</li>
+        <li>Kevin Lamping wrote a document to address <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md">coding standards while writing CSS</a>.</li>
+    </ul>
 
     <h3 class="title clear">Typography</h3>
-    <div class="component-description clear">
-        <p>FIXME: Flesh out</p>
-        <ul>
-            <li>We use Roboto</li>
-            <li>In the context of Roboto, so long as you are using the rxApp and rxPage components, you'll be okay on this.</li>
-            <li> src/rxApp/README.md </li>
-            <li> https://github.com/rackerlabs/encore-ui/blob/master/guides/getting-started.md </li>
 
-        </ul>
-    </div>
+    <ul class="list">
+        <li>Encore specific: We use Google Fonts, in particular the Roboto font. Google Fonts is not included in the Encore-UI package at this time, so you will need to add this to your index.html file.
+        <li>The Encore-UI default font is Roboto. This is used for all text on the page and is loaded via Google Fonts. <a href="https://github.com/rackerlabs/encore-ui/tree/master/src/rxApp#fonts">Read the README.md file for rxApp</a> on fonts for more information.</li>
+    </ul>
 
     <h3 class="title clear">Heading/Title Styles</h2>
     <div class="component-description clear">
-        <p>Headings are sized using 'xl', 'lg', 'sm' and 'xs'.</p>
-        <p>The size of the heading is not impacted by the heading level used (e.g. &lt;h1&gt;, &lt;h2&gt;). This is done to ensure that the heading levels are sequential. See <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md#basic-rules">https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md#basic-rules for further reasoning</a>.</p>
-        <p>For design consistency, we usually use the default size (&lt;h2 class="title"&gt;) for most subheaders. Other headers classes can be used for context. You can also add the <code>subdued</code> class - this is the class used as a subtitle in rxApp/rxPage.</p>
+        <ul class="list">
+            <li>Headings are sized using 'xl', 'lg', 'sm' and 'xs'.</li>
+            <li>The size of the heading is not impacted by the heading level used (e.g. &lt;h1&gt;, &lt;h2&gt;). This is done to ensure that the heading levels are sequential.</li>
+            <li>Encore specific: For design consistency, we usually use the default medium size (&lt;h2 class="title"&gt;) for most subheaders. Other headers classes can be used for context.</li>
+        </ul>
     </div>
 
     <tabset class="clearfix clear">
@@ -35,51 +34,96 @@
             <h3 class="title">Default Class (medium, standard sub-header)</h3>
             <h3 class="title subdued">Subdued Class</h3>
             <h4 class="title sm">Small Class</h4>
-            <h5 class="title xs">Extra Small Class</h5>            
+            <h5 class="title xs">Extra Small Class</h5>
+        </tab>
+        <tab heading="Markup">
+            [FIXME: MARKUP GOES HERE]
         </tab>
     </tabset>    
 
     <h3 class="title clear">Descriptions / Metadata</h2>
 
     <div class="component-description clear">
-        <p>The <a href="#">Encore-UI metadata component</a> is a list of terms with their associated descriptions. This is used throughout Encore to show metadata, especially on an individual object such as a server or a CBS volume. This is an ideal solution if you have anywhere from 5-10 definitions; anything more than that - or anything with that displays visual or image content, and you may want to consider a different design pattern. (In Encore, see what we use in Support Services for an example of this.)</p>
+        <ul class="list">
+            <li>The <a href="http://rackerlabs.github.io/encore-ui/#/component/metadata">Encore-UI metadata component</a> is a list of terms with their associated descriptions. This is used throughout Encore to show metadata, especially on an individual object such as a server or a CBS volume.</li>
+            <li>Encore Specific: This is an ideal solution if you have anywhere from 5-10 definitions. (See a Server Details page or Image Details page under Accounts -&gt; Cloud for an example.) Anything more than that - or anything with that displays visual or image content, and you may want to consider a different design pattern. (In Encore, see what we use in Support Services for an example of this.)</li>
+        </ul>
     </div>
+
+    <tabset class="clearfix clear">
+        <tab heading="Demo">
+<div class="metadata">
+     <dl>
+         <dt>Status:</dt>
+         <dd>Active</dd>
+         <dt>RCN:</dt>
+         <dd>RCN-555-555-555</dd>
+         <dt>Type:</dt>
+         <dd>Cloud</dd>
+         <dt>Service Level:</dt>
+         <dd>Mannaged &rarr; Mannaged</dd>
+         <dt>Service Type:</dt>
+         <dd>DevOps &rarr; SysOps</dd>
+         <dt>Plan Change Status:</dt>
+         <dd>Pending</dd>
+         <dt>Service Team:</dt>
+         <dd><a href="#">Link</a></dd>
+     </dl>
+ </div>
+        </tab>
+        <tab heading="Markup">
+            [FIXME: MARKUP GOES HERE]
+        </tab>
+    </tabset>  
 
     <h3 class="title">Lists</h2>
     <div class="component-description clear">
-        <p>By default, we do not list styles for lists. Add bullets/decimals to lists with the 'list' class. It is also possible to build non-semantic lists using the additional <code>item</code> class.</p>
-        <p>Use this in conjunction with icons, colors and helper classes such as <code>.flush-right</code> to build out action menus. Look at the detail pages in Cloud Servers and view-source for additional context.</p>
+        <ul class="list">
+            <li>Lists by default do not have styles. Add bullets/decimals to lists with the 'list' class. It is also possible to build non-semantic lists using the additional <code>item</code> class.</li>
+            <li>Encore Specific: Use this in conjunction with icons, colors and helper classes such as <code>.flush-right</code> to build out action menus. Look at the detail pages in Cloud Servers and view-source for additional context.</li>
+        </ul>
     </div>
     <tabset class="clearfix clear">
         <tab heading="Demo">
             <div rx-compile="component.docs.html" class="component-demo">
+<div class="pure-g columns clear">
+    <div class="pure-u-1-5">
 <ul>
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>    
-</ul>
+</ul>        
+    </div>
+    <div class="pure-u-1-5">
 <ol class="list">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
-</ol>
+</ol>        
+    </div>
+    <div class="pure-u-1-5">
 <ul class="list">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
-</ul>
-
+</ul>        
+    </div>
+    <div class="pure-u-1-5">
 <div class="list bulleted">
     <p class="item">Item 1</p>
     <p class="item">Item 2</p>
     <p class="item">Item 3</p>
-</div>
-
+</div>        
+    </div>
+    <div class="pure-u-1-5">
 <div class="list decimal">
     <p class="item">Item 1</p>
     <p class="item">Item 2</p>
     <p class="item">Item 3</p>
-</div>            
+</div>         
+    </div>
+</div>                
+
             </div>
         </tab>
         <tab heading="Markup" ng-if="component.docs.html">
@@ -89,7 +133,10 @@
 
     <h3 class="title">Wells</h2>
     <div class="component-description clear">
-        <p>Creates a 'well' effect - a box with significant padding and light gray background. In the context of Encore, we currently use this in the context of adding large amounts of extraneous or optional information. (Take a look at Account -> Cloud -> Database -> Create New Instance for an example of this.</p>
+        <ul class="list">
+            <li>Creates a 'well' effect - a box with significant padding and light gray background.</li>
+            <li>Encore Specific: In the context of Encore, we currently use this in the context of adding large amounts of extraneous or optional information. (Take a look at Account -> Cloud -> Database -> Create New Instance for an example of this. It is also seen to show post-script content to modals. (FIXME: WHERE?)</li>
+        </ul>
     </div>
     <tabset class="clearfix clear">
         <tab heading="Demo">
@@ -104,33 +151,30 @@
     </tabset>
 
     <h2 class="title lg">Helper Classes</h2>
-    <h3 class="title">Status Classes</h2>
     <div class="component-description clear">
-        <p>Styles text to provide a clearer status regarding a simple message. FIXME: write out more detail about this.</p>
 
-Subdued Text: The .subdued class is a basic color change to make text less prominant. Add hover style if a link or inside a link.
-
-Full Width
-
-Class that marks content as full width (e.g. to give a button full width). Requires 'display' to be defined as inline-block or block.
-
-Hidden content
-.hidden
-
-Add to hide an element but not remove it from the spacing of the page
-
-.visually-hidden
-
-Used to hide content visually but let them still be read by screen readers (removed from the page spacing) See http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
-
-Clearing Floats
-Clearfix
-
-Provide clearfix functionality See http://nicolasgallagher.com/micro-clearfix-hack/
-
-Clearing siblings
-
-Simple classes to help with clearing previous sibling floats
+<dl>
+    <dt>Status Classes</dt>
+    <dd>Styles text to provide a clearer status regarding a simple message. FIXME: MOVE THIS SECTION TO LINKS AND COLORS and write out more detail about this there.</dd>
+    <dt>Subdued Text</dt>
+    <dd>The .subdued class is a basic color change to make text less prominant. Add hover style if a link or inside a link.</dd>
+    <dt>Full Width</dt>
+    <dd>Class that marks content as full width (e.g. to give a button full width). Requires 'display' to be defined as inline-block or block.</dd>
+    <dt>Hidden content</dt>
+    <dd>
+        <ul>
+            <li>.hidden class will add to hide an element but not remove it from the spacing of the page.</li>
+            <li>.visually-hidden - Used to hide content visually but <a href="http://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html">let them still be read by screen readers</a> (removed from the page spacing)</li>
+        </ul>
+    </dd>
+    <dt>Clearing floats</dt>
+    <dd>
+        <ul>
+            <li>Clearfix - Provide clearfix functionality See http://nicolasgallagher.com/micro-clearfix-hack/</li>
+            <li>Clearing siblings - Simple classes to help with clearing previous sibling floats</li>
+        </ul>
+    </dd>    
+</dl>
 
     </div>
     <tabset class="clearfix clear">

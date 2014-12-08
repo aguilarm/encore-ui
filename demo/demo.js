@@ -187,9 +187,11 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Layouts',
                     children: [
                         {
+                            href: '#/styleguide/layouts',
                             linkText: 'Grids'
                         },
                         {
+                            href: '#/styleguide/layouts',
                             linkText: 'Sample Layouts',
                             children: [
                                 {
