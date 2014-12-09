@@ -157,27 +157,27 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Basics',
                     children: [
                         {
-                            href: '#/styleguide/basics#part1',
+                            href: '#/styleguide/basics#typography',
                             linkText: 'Typography'
                         },
                         {
-                            href: '#/styleguide/basics#part1',
-                            linkText: 'Header Styles'
+                            href: '#/styleguide/basics#heading-title-styles',
+                            linkText: 'Header/Title Styles'
                         },                        
                         {
-                            href: '#/styleguide/basics#part2',
-                            linkText: 'Descriptions'
+                            href: '#/styleguide/basics#descriptions-metadata',
+                            linkText: 'Descriptions / Metadata'
                         },
                         {
-                            href: '#/styleguide/basics#part3',
+                            href: '#/styleguide/basics#lists',
                             linkText: 'Lists'
                         },
                         {
-                            href: '#/styleguide/basics#part4',
+                            href: '#/styleguide/basics#wells',
                             linkText: 'Wells'
                         },
                         {
-                            href: '#/styleguide/basics#part5',
+                            href: '#/styleguide/basics#helper-classes',
                             linkText: 'Helper classes'
                         }
                     ]
@@ -196,15 +196,15 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                             children: [
                                 {
                                     href: '#/styleguide/layouts/1',
-                                    linkText: 'Layout #1'
+                                    linkText: 'Layout 1: Detail Page'
                                 },
                                 {
                                     href: '#/styleguide/layouts/2',
-                                    linkText: 'Layout #2'
+                                    linkText: 'Layout 2: Data Table'
                                 },
                                 {
                                     href: '#/styleguide/layouts/3',
-                                    linkText: 'Layout #3'
+                                    linkText: 'Layout 3: Create Form'
                                 }
                             ]
                         }
@@ -215,7 +215,7 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Buttons & Links',
                     children: [
                         {
-                            href: '#/styleguide/buttons#FIXME',
+                            href: '#/styleguide/buttons',
                             linkText: 'Customizing Buttons'
                         },
                         {
@@ -229,19 +229,19 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Tables',
                     children: [
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/tables',
                             linkText: 'Basics'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/tables#directives',
                             linkText: 'Directives'
                         },                                            
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/tables#designpatterns',
                             linkText: 'Design Patterns'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/tables#roadmap',
                             linkText: 'UI Roadmap / Possible Future-work'
                         }                    
                     ]
@@ -251,15 +251,15 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Forms',
                     children: [
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/forms',
                             linkText: 'Directives'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/forms#designpatterns',
                             linkText: 'Design Patterns within Encore'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/forms#roadmap',
                             linkText: 'UI Roadmap / Possible Future-work'
                         }                        
                     ]
@@ -269,15 +269,15 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     linkText: 'Modals',
                     children: [
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/modals',
                             linkText: 'Basic Usage'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/modals#designpatterns',
                             linkText: 'Design Best Practices'
                         },
                         {
-                            href: '#/styleguide/tables#FIXME',
+                            href: '#/styleguide/modals#roadmap',
                             linkText: 'UI Roadmap / Possible Future-work'
                         }                         
                     ]                    
