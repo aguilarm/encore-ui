@@ -58,20 +58,23 @@
     <div class="component-description clear">
 
 <h2>Colors</h2>
-<p>Within the context of Encore, we use the following colors to convey action links:</p>
+
+<p>Status Classes are used to provide a clearer status regarding a simple message. Within the context of Encore, we use the following colors to convey action links:</p>
 <ul class="list">
-    <li>Green is for create/add actions. When part of a list, they appear at the top.</li>
-    <li>Blue is for edit/modify actions. When part of a list, they appear second.</li>
-    <li>Yellow is for build an action upon something. When part of a list, they appear third.</li>
-    <li>Red is for destructive actions. When part of a list, they appear last.</li>
+    <li>Green (<code>.msg-action</code>) is for create/add actions. When part of a list, they appear at the top.</li>
+    <li>Blue (<code>.msg-info-blue</code>) is for edit/modify actions. When part of a list, they appear second.</li>
+    <li>Orange (<code>.msg-info</code>) is for build an action upon something. When part of a list, they appear third.</li>
+    <li>Red (<code>.msg-warn</code>) is for destructive actions. When part of a list, they appear last.</li>
 </ul>
+<p>
+<p>HEADS UP: Because these classes are colors, they can also be applied to regular text as well. This can cause confusion between when something is a text and something is an action. This is a design pattern discrepancy that will need to be resolved in a future iteration.</p>
 
 <h2>Icons</h2>
 <p>We've been using the font-awesome library as a way to primarily visualize actionable items. For the majority of Encore, actionable links are used in two places - in the upper right hand section of a details page, flushed
 right with the <code>page-actions</code> and <code>actions-area</code> classes, or in the rxActionMenu directive.</p>
 <p>We have included some icons that have used throughout icon, as well as the actions associated with the icons. Feel free to re-use these icons as you see fit.</p>
 
-<p>FIXME: Call out inconsistencies</p>
+<p>HEADS UP: Most icons have been chosen based on the verb (Add, Edit, Delete, Restart, etc) but there are a couple of icons chosen on the noun (consoles, tachometers for throttling). This is a design pattern discrepancy that will need to be resolved in a future iteration.</p>
 
     </div>
     <tabset class="clearfix clear">
