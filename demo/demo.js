@@ -230,21 +230,57 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                     children: [
                         {
                             href: '#/styleguide/tables#FIXME',
-                            linkText: ''
+                            linkText: 'Basics'
                         },
                         {
                             href: '#/styleguide/tables#FIXME',
-                            linkText: ''
+                            linkText: 'Directives'
+                        },                                            
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'Design Patterns'
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'UI Roadmap / Possible Future-work'
                         }                    
                     ]
                 },
                 {
                     href: '#/styleguide/forms',
-                    linkText: 'Forms'
+                    linkText: 'Forms',
+                    children: [
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'Directives'
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'Design Patterns within Encore'
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'UI Roadmap / Possible Future-work'
+                        }                        
+                    ]
                 },
                 {
                     href: '#/styleguide/modals',
-                    linkText: 'Modals'
+                    linkText: 'Modals',
+                    children: [
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'Basic Usage'
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'Design Best Practices'
+                        },
+                        {
+                            href: '#/styleguide/tables#FIXME',
+                            linkText: 'UI Roadmap / Possible Future-work'
+                        }                         
+                    ]                    
                 }
             ]
         },

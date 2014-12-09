@@ -2,41 +2,55 @@
 
 <h3 class="title clear">Basic Usage</h3>
 
-<ul>
-    <li>Basic usage of the rxModalAction angular.js component. Using rxModalForm which will automatically comes with a title, subtitle, submit and cancel text.</li>
-    <li>Address notifications (static)</li>
+<ul class="list">
+    <li><a href="FIXME">See the rxModalAction directive</a> for implementation and examples.</li>
 </ul>
 
 <h2 class="title lg">Design Patterns within Encore</h2>
 
-<ul>
-    <li>All this comes with design patterns we already use for the rest of Encore so you don't have to worry about design, but if you need to deviate from that at all, you'll need to take a look at how the rxModalForm directive was built and build upon that.</li>
-    <li>When do we use modals versus requiring a whole new page?  What is the threshold for what we want to do in a modal?</li>
-    <li>Strategy for communicating errors / validation messages from the server - should there be direction on how we do this?</li>
-</ul>
+<div class="component-description clear">
+    <ul class="list">
+        <li>In Encore, when do we use modals versus requiring a whole new page?  What is the threshold for what we want to do in a modal?
+            <ul class="list">
+                <li>According to Bootstrap, "Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults."</li>
+                <li>For Encore, we use modals for confirmation messaging. For notification messages we use rxNotification, the static subdirective of rxNotify. See the example below, replacing <code>type="error"</code> with the appropriate message response.</li>
+                <li>HEADS UP: We also have used modals to edit content in lieu of having an edit view. This design pattern is not ideal and an Edit View will need to be considered as a pattern in future iterations.</li>
+            </ul>
+        </li>    
+        <li>Using the rxModalForm subdirective will automatically provide you with a title, subtitle, submit and cancel text. You may use rxForm elements within rxModalForm.</li>
+        <li>For real world examples, take a look at the <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/templates/server-actions.html">ng-template blocks triggered from server action links</a> under Encore Cloud.</li>
+        <li>If you need to deviate from the title / footer pattern at all, you'll need to take a look at the <a href="https://github.com/rackerlabs/encore-ui/blob/master/src/rxModalAction/templates/rxModalActionForm.html">rxModalForm directive template markup</a> and build upon that.</li>
+    </ul>
+</div>
 
-<h2 class="title lg">UI Roadmap / Possible Future-work</h2>
-
-<ul>
-    <li>We should document patterns of how modals are titled and what button text is (see LBaaS for examples--there are some inconsistencies here Encore-wide)</li>
-</ul>
-
-
-
-
-<h3 class="title clear">Header</h3>
-
-    <div class="component-description clear">
-    </div>
     <tabset class="clearfix clear">
         <tab heading="Demo">
             <div rx-compile="component.docs.html" class="component-demo">
+<div>
+    <rx-modal-action template-url="deleteServer.html">
+        <i class="fa fa-fw fa-times fa-lg"></i> Delete Server
+    </rx-modal-action>
+</div>
+<script type="text/ng-template" id="deleteServer.html">
+    <rx-modal-form
+        title="Delete Server"
+        subtitle="ABC123456"
+        submit-text="Delete Server"
+        cancel-text="Cancel">
+        <rx-notification type="error">
+            Are you sure you want to delete this server? This action can not be undone.
+        </rx-notification>
+    </rx-modal-form>
+</script>
             </div>
-        </tab>
-        <tab heading="Markup" ng-if="component.docs.html">
-            <rx-prism language="markup"></rx-prism>
         </tab>
     </tabset>
 
+<h2 class="title lg">UI Roadmap / Possible Future-work</h2>
+
+<ul class="list">
+    <li>Create a design pattern to document modal titles and sub-titles.</li> 
+    <li>Solify a design language for action button and cancel button copy</li>
+</ul>
 
 </rx-page>
