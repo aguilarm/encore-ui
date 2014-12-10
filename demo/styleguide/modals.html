@@ -13,8 +13,8 @@
         <li>In Encore, when do we use modals versus requiring a whole new page?  What is the threshold for what we want to do in a modal?
             <ul class="list">
                 <li>According to Bootstrap, "Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults."</li>
-                <li>For Encore, we use modals for confirmation messaging. For notification messages we use rxNotification, the static subdirective of rxNotify. See the example below, replacing <code>type="error"</code> with the appropriate message response.</li>
-                <li>HEADS UP: We also have used modals to edit content in lieu of having an edit view. This design pattern is not ideal and an Edit View will need to be considered as a pattern in future iterations.</li>
+                <li>For Encore, we use modals for confirmation messaging. For notification messages we use rxNotification, the static subdirective of rxNotify. See the example below which uses <code>type="error"</code>. Note that <code>type="error"</code> can be replaced with the appropriate message response style.</li>
+                <li><span class="msg-warn">HEADS UP:</span> We also have used modals to edit content in lieu of having an edit view. This design pattern is not ideal and an Edit View will need to be considered as a pattern in future iterations.</li>
             </ul>
         </li>    
         <li>Using the rxModalForm subdirective will automatically provide you with a title, subtitle, submit and cancel text. You may use rxForm elements within rxModalForm.</li>
@@ -27,7 +27,7 @@
         <tab heading="Demo">
             <div rx-compile="component.docs.html" class="component-demo">
 <div>
-    <rx-modal-action template-url="deleteServer.html">
+    <rx-modal-action class="msg-warn" template-url="deleteServer.html">
         <i class="fa fa-fw fa-times fa-lg"></i> Delete Server
     </rx-modal-action>
 </div>
@@ -49,8 +49,8 @@
 <h2 class="title lg" id="roadmap">UI Roadmap / Possible Future-work</h2>
 
 <ul class="list">
-    <li>Create a design pattern to document modal titles and sub-titles.</li> 
-    <li>Solify a design language for action button and cancel button copy</li>
+    <li>Create a design pattern to document modal titles and subtitles.</li> 
+    <li>Solidify copy and design language for action and cancel buttons within modals.</li>
 </ul>
 
 </rx-page>
