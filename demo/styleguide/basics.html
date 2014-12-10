@@ -4,12 +4,16 @@
 
     <ul class="list">
         <li>The goal of this sub-site is to get development teams at Rackspace not familiar with the Encore product a set of design patterns so all parts of Encore look like one finished, unified product.</li>
-        <li>This section of the Demo site focuses mainly on markup, CSS and design patterns.</li>
+        <li>This section of the Demo site focuses mainly on markup, CSS and design patterns. If you're curious about specific Encore-specific angular.js directives, find the "All Components" section in the left hand navigation.</li>
+        <li>If you're a Rackspace team outside of Encore and need help setting up an new project from an engineering perspective go to this <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/getting-started.md">Getting Started guide</a> in the Encore-UI repository.
+        <ul class="list">
+            <li>For the most part, RackSpace developer teams will be creating mark-up using the <a href="http://rackerlabs.github.io/encore-ui/#/component/rxApp">rxPage subdirective of rxApp</a> as a container.</li>
+            <li><a href="https://github.com/rackerlabs/encore-ui/blob/master/src/rxApp/templates/rxPage.html">rxPage's template code</a> contains a breadcrumb component, an attribute to pre-fill titles and subtitles and a rxNotification container so you can send page-level communication errors and validation messages i a standardized way. Check the angular.js code for controllers within Cloud Encore for implementation examples.</li>
+        </ul>
+        </li>
         <li>The <a href="https://github.com/rackerlabs/encore-ui/tree/master/src/rxApp">rxApp</a> common.less file defines many base CSS rules and classes for app use. Included in this is normalize.css. This helps create a consistent starting point for styles across all browsers.</li>
-        <li>If you're curious about specific Encore-specific angular.js directives, find the "All Components" section in the left hand navigation.</li>
-        <li>If you're a Rackspace team outside of Encore and need help setting up an new project from an engineering perspective go to this <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/getting-started.md">Getting Started guide</a> in the Encore-UI repository.</li>
+
         <li>Kevin Lamping wrote a document to address <a href="https://github.com/rackerlabs/encore-ui/blob/master/guides/css-styleguide.md">coding standards while writing CSS</a>.</li>
-        <li>FIXME: Strategy for communicating errors / validation messages from the server - should there be direction on how we do this?</li>
     </ul>
 
     <h3 class="title clear" id="typography">Typography</h3>
@@ -136,7 +140,7 @@
     <div class="component-description clear">
         <ul class="list">
             <li>Creates a 'well' effect - a box with significant padding and light gray background.</li>
-            <li>Encore Specific: In the context of Encore, we currently use this in the context of adding large amounts of extraneous or optional information. (Take a look at Account -> Cloud -> Database -> Create New Instance for an example of this. It is also seen to show post-script content to modals. (FIXME: WHERE?)</li>
+            <li>Encore Specific: In the context of Encore, we currently use this in the context of adding large amounts of extraneous or optional information. (Take a look at Account -> Cloud -> Database -> Create New Instance for an example of this or <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/databases/CreateInstance.html#L48-L67">view source</a>.)</li>
         </ul>
     </div>
     <tabset class="clearfix clear">

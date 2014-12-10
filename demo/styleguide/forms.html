@@ -63,9 +63,11 @@
 
 <h3 class="title clear">Fieldsets with rxFormFieldset</h3>
 
+<div class="component-description clear">
 <ul>
     <li>The rxFormFieldset directive creates a field row wrapped in a fieldset. Used for fields which include multiple inputs (e.g. rxFormOptionTable).</li>
 </ul>
+</div>
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
@@ -89,10 +91,12 @@
 
 <h3 class="title clear">Selects with rxFormItem</h3>
 
+<div class="component-description clear">
 <ul>
     <li>The rxFormItem directive replaces the default UI of select fields and adds a custom border/arrow.</li>
     <li>You would most likely use this angular.js directive directly, if you are not using angular you could wrap the elements with <code>.field-select</code>.</li>
 </ul>
+</div>
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
@@ -163,19 +167,18 @@
 <h2 class="title lg" id="designpatterns">Design Patterns within Encore</h2>
 
 <ul class="list">
-    <li>Encore uses forms both in separate pages - see our example, which is used when you create a new object such as a Cloud Server or a Database under Encore Cloud, or within a modal such as when a particular action needs to be performed in a server detail page.</li>
-    <li>At this time, Encore only uses stacked forms. This may change later.</li>
-    <li>See the color section for details about how we style and color buttons, but in a nutshell: submit buttons should use the green submit class unless you're deleting or formatting, which should be the negative class. If you need to use a button in your field for auxillary purposes, make it blue.</li>
+    <li>Forms can be used on its own page. You can see this in Encore when you create a new object such as a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/CreateServer.html">Cloud Server</a> or a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/databases/CreateInstance.html">Database under Encore Cloud</a>.</li> 
+    <li>Forms are also used within modals. This can be see when modifying content that requires form fields such as <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/templates/server-actions.html#L33-L72">actions performed on a server detail page</a>.</li>
+    <li><a href="FIXME">See the section on links and buttons</a> for details about how we style and color buttons, but in a nutshell: submit buttons should use the green submit class unless you're deleting or formatting, which should be the negative class. If you need to use a button in your field for auxillary purposes, make it blue.</li>
+    <li>Wells can be used to create additional context for the form.</li>
 </ul>
 
 <h2 class="title lg" id="roadmap">UI Roadmap / Possible Future-work</h2>
 
 <ul class="list">
     <li>Fleshing out a design pattern for edit states. Up until now, the editing of content has been relegated to using modals to edit individual line items. As a result, different products have handled the concept of an edit state differently. There should be conformity for this, but we have not designed a user pattern yet.</li>
-    <li>Different types of forms such as inline</li>
+    <li>HEADS UP: At this time, Encore only uses stacked forms, and do not offer a design pattern for inline forms. This may change later.</li>
 </ul>
 
-
-The only other thing we have is forms within the concept of modals
-Acknowledge metadata in create form a la https://staging.encore.rackspace.com/cloud/323676/testuserforthisaccount/databases/instances/create - Can we add a screenshot link here b/c I don't have to Cloud?  (CAS troubles)
+</rx-page>
 
