@@ -14,7 +14,7 @@
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
 <h4 class="title sm">rxFormItem Directive</h4>            
 <rx-form-item label="Plain textbox">
     <input type="text" />
@@ -45,7 +45,7 @@
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
 
 <div class="rx-form layout-compressed">
     <rx-form-item label="Plain textbox">
@@ -70,7 +70,7 @@
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
 <div class="form-item rx-form-fieldset">
     <fieldset>
         <legend class="field-legend">
@@ -99,7 +99,7 @@
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
 <span class="field-select">
     <select>
         <option value="1">Option #1</option>
@@ -123,7 +123,7 @@
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
     <rx-form-item
         label="Soft"
         description="Performs a graceful shutdown of your system. Services are halted individually and the system is restarted.">
@@ -153,7 +153,7 @@ FIXME
 
 <tabset class="clearfix clear">
     <tab heading="Demo">
-        <div rx-compile="component.docs.html" class="component-demo">
+        <div class="component-demo">
 <span class="field-input">
     <input type="text" class="ng-invalid ng-dirty" value="Bad content here">
 </span>
@@ -164,7 +164,7 @@ FIXME
 <h2 class="title lg" id="designpatterns">Design Patterns within Encore</h2>
 
 <ul class="list">
-    <li>Forms can be used on its own page. You can see this in Encore when you create a new object such as a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/CreateServer.html">Cloud Server</a> or a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/databases/CreateInstance.html">Database under Encore Cloud</a>.</li> 
+    <li>Forms can be used on their own page. You can see this in Encore when you create a new object such as a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/CreateServer.html">Cloud Server</a> or a <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/databases/CreateInstance.html">Database under Encore Cloud</a>.</li> 
     <li>Forms are also used within modals. This can be see when modifying content that requires form fields such as <a href="https://github.com/rackerlabs/encore-cloud-ui/blob/master/app/views/servers/templates/server-actions.html#L33-L72">actions performed on a server detail page</a>.</li>
     <li><a href="FIXME">See the section on links and buttons</a> and <a href="FIXME">sample form #3</a> for details about how we style and color buttons, but in a nutshell: submit buttons should use the green submit class unless you're deleting or formatting, which should be the negative class. If you need to use a button in your field for auxillary purposes, make it blue.</li>
     <li><a href="FIXME">Wells</a> can be used to create additional context for the form.</li>

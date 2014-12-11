@@ -162,11 +162,11 @@ angular.module('demoApp', ['encore.ui', 'ngRoute'])
                         },
                         {
                             href: '#/styleguide/basics#heading-title-styles',
-                            linkText: 'Header/Title Styles'
+                            linkText: 'Header & Title Styles'
                         },                        
                         {
                             href: '#/styleguide/basics#descriptions-metadata',
-                            linkText: 'Descriptions / Metadata'
+                            linkText: 'Descriptions & Metadata'
                         },
                         {
                             href: '#/styleguide/basics#lists',
