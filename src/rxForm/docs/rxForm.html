@@ -30,6 +30,13 @@
             <input type="number" ng-model="volume.cost" />
         </rx-form-item>
 
+        <h4 class="title sm">Example with validators</h4>
+        <rx-form-item label="Email address">
+            <input name="userEmail" type="email" ng-model="details.email" foocheck />
+            <span ng-show="demoForm.userEmail.$error.email">Invalid email</span>
+            <span ng-show="demoForm.userEmail.$error.foocheck">Your email address must contain 'foo'</span>
+        </rx-form-item>
+
         <hr>
 
         <h3 class="title">Select Boxes</h3>

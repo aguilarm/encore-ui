@@ -15,7 +15,7 @@ angular.module('encore.ui.rxForm', ['ngSanitize'])
  * @param {String} suffix - Text to include to the right of content
  * @param {String} description - Text to place below input
  */
-.directive('rxFormItem', function ($document) {
+.directive('rxFormItem', function ($document, rxDOMHelper) {
     return {
         restrict: 'E',
         templateUrl: 'templates/rxFormItem.html',
@@ -27,7 +27,12 @@ angular.module('encore.ui.rxForm', ['ngSanitize'])
             description: '@'
         },
         link: function (scope, el) {
-            var inputSelectors = '.field-input input, .field-input select, .field-input textarea';
+            var inputSelectors = [
+                '.field-input-wrapper input',
+                '.field-input-wrapper select',
+                '.field-input-wrapper textarea'
+            ];
+            inputSelectors = inputSelectors.join(', ');
 
             // For accessibility reasons, we need to link the <label> to the <input>
             // To do this, we use the 'for' and 'id' attributes on the <label> and <input> tags, respectively
@@ -56,6 +61,11 @@ angular.module('encore.ui.rxForm', ['ngSanitize'])
                     suffixSpan.className = 'field-suffix';
                     inputField.parentNode.insertBefore(suffixSpan, inputField.nextSibling);
                 }
+
+                // Put a <span class="field-input"> around the input/select/textarea
+                var fieldInputSpan = $document[0].createElement('span');
+                fieldInputSpan.className = 'field-input';
+                rxDOMHelper.wrapAll(fieldInputSpan, inputField);
 
                 var inputId = inputField.getAttribute('id');
 
