@@ -15,7 +15,7 @@ angular.module('encore.ui.rxForm', ['ngSanitize'])
  * @param {String} suffix - Text to include to the right of content
  * @param {String} description - Text to place below input
  */
-.directive('rxFormItem', function () {
+.directive('rxFormItem', function ($document) {
     return {
         restrict: 'E',
         templateUrl: 'templates/rxFormItem.html',
@@ -45,6 +45,16 @@ angular.module('encore.ui.rxForm', ['ngSanitize'])
                 // make sure an input field is found
                 if (!_.isObject(inputField)) {
                     return;
+                }
+
+                // Manually insert the `suffix` span after the input/select/textarea
+                // It needs to be in between the input/select/textarea and any other
+                // transcluded content, so we have to do it here instead of in the template
+                if (scope.suffix) {
+                    var suffixSpan = $document[0].createElement('span');
+                    suffixSpan.innerHTML = scope.suffix;
+                    suffixSpan.className = 'field-suffix';
+                    inputField.parentNode.insertBefore(suffixSpan, inputField.nextSibling);
                 }
 
                 var inputId = inputField.getAttribute('id');
