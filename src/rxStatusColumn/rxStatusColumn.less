@@ -1,0 +1,28 @@
+/*
+ * rxStatusColumn
+ */
+
+th.rx-status-header {
+    width: 17px;
+    padding: 0;
+}
+
+td.rx-status-column {
+    &.status-ACTIVE {
+        color: transparent;
+        background-color: #ddffd3;
+    }
+    &.status-WARNING {
+        color: transparent;
+        background: #ffa61b url('images/warning-triangle.png') center no-repeat;
+    }
+    &.status-ERROR {
+        color: transparent;
+        background: @warnRed url('images/error-stop.png') center no-repeat;
+    }
+    &.status-INFO {
+        background: #83c9fe url('images/info-circled.png') center no-repeat;
+        color: transparent;
+    }
+
+}
