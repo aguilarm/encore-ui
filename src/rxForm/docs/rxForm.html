@@ -30,10 +30,10 @@
         </rx-form-item>
 
         <h4 class="title sm">Example with validators</h4>
-        <rx-form-item label="Email address">
+        <rx-form-item label="Email address" description="Must contain foo.">
             <input name="userEmail" type="email" ng-model="details.email" foocheck />
-            <span ng-show="demoForm.userEmail.$error.email">Invalid email</span>
-            <span ng-show="demoForm.userEmail.$error.foocheck">Your email address must contain 'foo'</span>
+            <div ng-show="demoForm.userEmail.$error.email" class="inline-error">Invalid email</div>
+            <div ng-show="demoForm.userEmail.$error.foocheck" class="inline-error">Your email address must contain 'foo'</div>
         </rx-form-item>
 
         <hr>
